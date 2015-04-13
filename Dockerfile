@@ -12,7 +12,7 @@ RUN unzip -o bvc-dependencies-1.2.0.zip -d /opt && rm -rf bvc-dependencies-1.2.0
 WORKDIR /opt/bvc
 ENV JAVA_HOME /opt/jdk1.7.0_71/jre
 RUN ./install -i
-COPY web.zip /opt/bvc/
+RUN curl -sL https://github.com/alrooney/bvc_docker/raw/master/web.zip -o web.zip
 RUN unzip -o web.zip && rm -rf web.zip 
 EXPOSE 162 179 1088 1790 1830 2400 2550 2551 2552 4189 4342 5005 5666 6633 6640 6653 7800 8000 8080 8101 8181 8383 9000 12001
 CMD /opt/bvc/bin/start && /opt/bvc/bin/taillog
