@@ -5,7 +5,7 @@ Requirements:
 * Docker https://docs.docker.com/userguide/
 * Brocade Vyatta Controller zip files (bvc-1.2.0.zip and bvc-dependencies-1.2.0.zip) which can be downloaded from here: http://www.brocade.com/forms/jsp/vyatta-controller/index.jsp
 
-Note: for OSX and Windows I recommend using boot2docker with docker https://github.com/boot2docker/boot2docker.  If using boot2docker I recommend initializing it as follows to make sure your vm has enough memory for bvc: boot2docker init -m 6500
+Note: for OSX and Windows I recommend using boot2docker with docker https://github.com/boot2docker/boot2docker.  If using boot2docker I recommend initializing it as follows to make sure your vm has enough memory for bvc: ```boot2docker init -m 6500```
 
 Setup:
 * git clone this repository or simply just download the Dockerfile https://github.com/alrooney/bvc_docker/raw/master/Dockerfile
