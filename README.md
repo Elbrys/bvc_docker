@@ -3,13 +3,13 @@ Brocade Vyatta Controller working in a docker container
 
 Requirements:
 * Docker https://docs.docker.com/userguide/
-* Brocade Vyatta Controller files which can be downloaded from here: http://www.brocade.com/forms/jsp/vyatta-controller/index.jsp
+* Brocade Vyatta Controller zip files (bvc-1.2.0.zip and bvc-dependencies-1.2.0.zip) which can be downloaded from here: http://www.brocade.com/forms/jsp/vyatta-controller/index.jsp
 
 Note: for OSX and Windows I recommend using boot2docker with docker https://github.com/boot2docker/boot2docker.  If using boot2docker I recommend initializing it as follows to make sure your vm has enough memory for bvc: boot2docker init -m 6500
 
 Setup:
 * git clone this repository or simply just download the Dockerfile https://github.com/alrooney/bvc_docker/raw/master/Dockerfile
-* put the Dockerfile and the bvc zip files downloaded from the link above into a working directory on your system
+* put the Dockerfile and the 2 bvc zip files downloaded from the link above into a working directory on your system
 * cd to that directory and make sure your docker environment is initialized and type: 
   ```docker build -t bvc-image .``` 
   This will build the image using the Dockerfile and bvc zip files in your current directory.  The first time you build this image it will take a while (minutes) depending on the speed of your internet connection.
