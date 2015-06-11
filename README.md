@@ -1,32 +1,3 @@
-# MOVED to https://github.com/BRCDcomm/bvc_docker
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # bvc_docker
 Brocade Vyatta Controller working in a docker container
 
