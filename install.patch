@@ -1,0 +1,15 @@
+--- install	2015-10-09 14:41:38.000000000 +0000
++++ install_new	2015-10-19 18:03:25.249889985 +0000
+@@ -206,10 +206,10 @@
+ 
+         ctrl.start()
+ 
+-        # 30 second init sleep, then try restconf every 5 seconds for up to 3 minutes
++        # 30 second init sleep, then try restconf every 5 seconds for up to 5 minutes
+         ctrl.start_log_and_print_message(
+                                     ' Waiting for restconf initialization ....')
+-        success = ctrl.wait_for_restconf_config(30, 36, 5)
++        success = ctrl.wait_for_restconf_config(30, 60, 5)
+ 
+         # TODO - this is a work around until we get a successful start
+         # happening consistently

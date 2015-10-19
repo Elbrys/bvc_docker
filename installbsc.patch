@@ -1,0 +1,10 @@
+--- installbsc	2015-10-10 00:53:44.000000000 +0000
++++ installbsc_new	2015-10-19 18:10:07.089477075 +0000
+@@ -421,6 +421,7 @@
+ installfeature "utilities" bvc-ext-utilities-packaging-2.1.0.zip
+ 
+ if [ $somethingextracted -eq 1 ]; then
++    patch ${install_dir}/install < install.patch
+     ${install_dir}/install -i
+ fi
+ echo "installbsc completed."
