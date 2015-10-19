@@ -24,3 +24,6 @@ Setup:
 * To see your running container type: ```docker ps```
 * To stop a container that is running in the background type: ```docker kill <container_name>``` 
 * See docker documentation for all the info https://docs.docker.com/userguide/
+
+Notes:
+* This installs the Brocade SDN Controller every time you do docker run ...  The logical thing would be to install the controller during the docker build and then just start it during the docker run i.e. use /opt/bvc/bin/start.  However, I found that this was unreliable in starting the controller.  Feel free to play around with the Dockerfile to see if this works for you.  
