@@ -5,7 +5,7 @@ RUN apt-get install -y nodejs
 WORKDIR /opt
 RUN groupadd -r bvc && useradd -r -g bvc bvc
 RUN mkdir bvc
-ADD SDN-Controller-2.1.0-Software.gz /opt/bvc/
+ADD SDN-Controller-2.1.0-Software.* /opt/bvc/
 RUN chown -R bvc:bvc bvc
 USER bvc
 WORKDIR /opt/bvc/SDN-Controller-2.1.0-Software
