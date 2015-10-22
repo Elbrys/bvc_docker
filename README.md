@@ -8,7 +8,7 @@ Requirements:
 Note: for OSX and Windows I recommend using boot2docker(https://github.com/boot2docker/boot2docker) or Docker Toolbox(https://www.docker.com/toolbox).  If using boot2docker I recommend initializing it as follows to make sure your vm has enough memory for the Brocade Controller: ```boot2docker init -m 6500```
 
 Setup:
-* git clone this repository or simply just download the Dockerfile https://github.com/alrooney/bvc_docker/raw/master/Dockerfile
+* git clone this repository or simply just download the Dockerfile https://raw.githubusercontent.com/Elbrys/bvc_docker/master/Dockerfile
 * put the Dockerfile and the bsc gz file downloaded from the link above into a working directory on your system
 * cd to that directory and make sure your docker environment is initialized and type: 
   ```docker build -t bsc .``` NOTE!! don't forget the ```.``` which is how you specify the directory where the Dockerfile exists.  
@@ -24,3 +24,6 @@ Setup:
 * To see your running container type: ```docker ps```
 * To stop a container that is running in the background type: ```docker kill <container_name>``` 
 * See docker documentation for all the info https://docs.docker.com/userguide/
+
+Notes:
+* This installs the Brocade SDN Controller every time you do docker run ...  The logical thing would be to install the controller during the docker build and then just start it during the docker run i.e. use /opt/bvc/bin/start.  However, I found that this was unreliable in starting the controller.  Feel free to play around with the Dockerfile to see if this works for you.  
